@@ -4,17 +4,17 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 import asyncio
 
-api = '7455'
+api = '6651464'
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
-# ------ Марк ап клавиатура (с кнопками)----------------
-kb = ReplyKeyboardMarkup(resize_keyboard=True) # инициализация клавиатуры
+
+kb = ReplyKeyboardMarkup(resize_keyboard=True)
 button = KeyboardButton(text='Информация')
 button1 = KeyboardButton(text='Рассчитать')
 kb.row(button, button1)
 
-#-------- Ин лайн клавиатура (с кнопками)----------------
+
 kb2 = InlineKeyboardMarkup()
 in_button1 = InlineKeyboardButton(text='Рассчитать норму калорий', callback_data='calories')
 in_button2 = InlineKeyboardButton(text='Формулы расчёта', callback_data='formulas')
